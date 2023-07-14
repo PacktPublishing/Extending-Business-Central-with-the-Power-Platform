@@ -1,0 +1,53 @@
+
+
+let 
+
+Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i45WMjDUByIjA0MLpdhYAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [StartDate = _t]), 
+
+#"Added Custom" = Table.AddColumn(Source, "Today", each Date.From(DateTime.LocalNow())), 
+
+#"Changed Type1" = Table.TransformColumnTypes(#"Added Custom",{{"StartDate", type date}, {"Today", type date}}), 
+
+#"Inserted End of Year" = Table.AddColumn(#"Changed Type1", "End of Year", each Date.EndOfYear([Today]), type date), 
+
+#"Added Custom2" = Table.AddColumn(#"Inserted End of Year", "EndDate", each Date.AddYears([End of Year], 1)), 
+
+#"Changed Type3" = Table.TransformColumnTypes(#"Added Custom2",{{"EndDate", type date}}), 
+
+#"Removed Columns" = Table.RemoveColumns(#"Changed Type3",{"Today", "End of Year"}), 
+
+#"Added Custom1" = Table.AddColumn(#"Removed Columns", "Date", each {Number.From([StartDate])..Number.From([EndDate])}), 
+
+#"Expanded Date" = Table.ExpandListColumn(#"Added Custom1", "Date"), 
+
+#"Removed Columns1" = Table.RemoveColumns(#"Expanded Date",{"StartDate", "EndDate"}), 
+
+#"Changed Type" = Table.TransformColumnTypes(#"Removed Columns1",{{"Date", type date}}), 
+
+#"Inserted Year" = Table.AddColumn(#"Changed Type", "Year", each Date.Year([Date]), Int64.Type), 
+
+#"Inserted Month" = Table.AddColumn(#"Inserted Year", "Month Number", each Date.Month([Date]), Int64.Type), 
+
+#"Inserted Month Name" = Table.AddColumn(#"Inserted Month", "Month Name", each Date.MonthName([Date]), type text), 
+
+#"Inserted Week of Year" = Table.AddColumn(#"Inserted Month Name", "Week of Year", each Date.WeekOfYear([Date]), Int64.Type), 
+
+#"Inserted Day" = Table.AddColumn(#"Inserted Week of Year", "Day Number", each Date.Day([Date]), Int64.Type), 
+
+#"Inserted Day Name" = Table.AddColumn(#"Inserted Day", "Day Name", each Date.DayOfWeekName([Date]), type text), 
+
+#"Inserted Quarter" = Table.AddColumn(#"Inserted Day Name", "Quarter", each "Q" & Number.ToText(Date.QuarterOfYear([Date]))), 
+
+#"Changed Type2" = Table.TransformColumnTypes(#"Inserted Quarter",{{"Quarter", type text}}), 
+
+    #"Sorted Rows" = Table.Sort(#"Changed Type2",{{"Date", Order.Ascending}}), 
+
+    #"Renamed Columns" = Table.RenameColumns(#"Sorted Rows",{{"Month Name", "Month"}, {"Day Name", "Day"}}), 
+
+    #"Added Custom3" = Table.AddColumn(#"Renamed Columns", "Period", each Text.From([Year]) & "-" & Text.PadStart(Text.From([Month Number]), 2, "0")), 
+
+    #"Changed Type4" = Table.TransformColumnTypes(#"Added Custom3",{{"Period", type text}}) 
+
+in 
+
+    #"Changed Type4" 
