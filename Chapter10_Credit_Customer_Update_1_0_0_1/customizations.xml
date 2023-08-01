@@ -1,0 +1,48 @@
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Entities></Entities>
+  <Roles></Roles>
+  <Workflows></Workflows>
+  <FieldSecurityProfiles></FieldSecurityProfiles>
+  <Templates />
+  <EntityMaps />
+  <EntityRelationships />
+  <OrganizationSettings />
+  <optionsets />
+  <CustomControls />
+  <EntityDataProviders />
+  <CanvasApps>
+    <CanvasApp>
+      <Name>bcpp_bccustomerupdate_68303</Name>
+      <AppVersion>2023-07-07T01:05:11Z</AppVersion>
+      <Status>Ready</Status>
+      <CreatedByClientVersion>3.23063.15.0</CreatedByClientVersion>
+      <MinClientVersion>3.23063.15.0</MinClientVersion>
+      <Tags>{"primaryDeviceWidth":"640","primaryDeviceHeight":"1136","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.23063.15","minimumRequiredApiVersion":"2.2.0","hasComponent":"false","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20230707T010511Z-3.23063.15.0"}</Tags>
+      <IsCdsUpgraded>0</IsCdsUpgraded>
+      <GalleryItemId xsi:nil="true"></GalleryItemId>
+      <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+      <DisplayName>BC Customer Update</DisplayName>
+      <Description xsi:nil="true"></Description>
+      <CommitMessage xsi:nil="true"></CommitMessage>
+      <Publisher xsi:nil="true"></Publisher>
+      <AuthorizationReferences>[]</AuthorizationReferences>
+      <ConnectionReferences>{"7f6d4aa6-a740-49d9-9927-8b2a62d415eb":{"id":"/providers/microsoft.powerapps/apis/shared_dynamicssmbsaas","displayName":"Dynamics 365 Business Central","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1644/1.0.1644.3342/dynamicssmbsaas/icon.png","dataSources":["customers (v2.0)"],"dependencies":[],"dependents":[],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"SANDBOX,145aad1d-539e-ed11-988a-000d3a39265e":{"dataSources":{"customers (v2.0)":{"tableName":"customers,v2.0"}}}},"apiTier":"Premium","actions":["providers/PowerPlatform.Governance/Operations/Read","providers/PowerPlatform.Governance/Operations/Write"]},"3b84ea32-e288-473c-a12e-900642c14c81":{"id":"/providers/microsoft.powerapps/apis/shared_logicflows","displayName":"Logic flows","iconUri":"https://connectoricons-prod.azureedge.net/releases/v1.0.1636/1.0.1636.3297/logicflows/icon.png","dataSources":["PowerApp-&gt;Refreshadataset-2"],"dependencies":["423117bd-56e9-4a06-8414-e0ed32e10297"],"dependents":[],"parameterHints":{"workflowName":{"value":"99ac8a10-d15d-4f5d-a0c8-9b2c2db21c99"},"workflowEntityId":{},"423117bd-56e9-4a06-8414-e0ed32e10297":{"value":"shared_powerbi"}},"parameterHintsV2":{"workflowName":{"value":"99ac8a10-d15d-4f5d-a0c8-9b2c2db21c99"},"workflowEntityId":{},"shared_powerbi":{"value":"423117bd-56e9-4a06-8414-e0ed32e10297"}},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard","actions":["Run"]},"423117bd-56e9-4a06-8414-e0ed32e10297":{"id":"/providers/microsoft.powerapps/apis/shared_powerbi","displayName":"Power BI","iconUri":"https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3312/powerbi/icon.png","dataSources":[],"dependencies":[],"dependents":["3b84ea32-e288-473c-a12e-900642c14c81"],"parameterHints":{},"parameterHintsV2":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+      <DatabaseReferences>{}</DatabaseReferences>
+      <AppComponents>[]</AppComponents>
+      <AppComponentDependencies>[]</AppComponentDependencies>
+      <CanConsumeAppPass>1</CanConsumeAppPass>
+      <CanvasAppType>0</CanvasAppType>
+      <BypassConsent>0</BypassConsent>
+      <AdminControlBypassConsent>0</AdminControlBypassConsent>
+      <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+      <IntroducedVersion>1.0</IntroducedVersion>
+      <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
+      <IsCustomizable>1</IsCustomizable>
+      <BackgroundImageUri>/CanvasApps/bcpp_bccustomerupdate_68303_BackgroundImageUri</BackgroundImageUri>
+      <DocumentUri>/CanvasApps/bcpp_bccustomerupdate_68303_DocumentUri.msapp</DocumentUri>
+    </CanvasApp>
+  </CanvasApps>
+  <Languages>
+    <Language>1033</Language>
+  </Languages>
+</ImportExportXml>

@@ -1,0 +1,12 @@
+<powerbireport uniquename="bcpp_1a9a2102dfc6412b8c3459c0cd1cf52d">
+  <datasetid>
+    <uniquename>new_dataset_31c95c2d-2cf6-4131-b112-11ddf93e6d06</uniquename>
+  </datasetid>
+  <iscustomizable>1</iscustomizable>
+  <name>Customer Credit Review</name>
+  <package mimetype="application/zip">package.pbipkg</package>
+  <reportobjectid>0b1a80e7-658d-4fe6-9f47-47eb714306a4</reportobjectid>
+  <reportoriginalobjectid>50969469-d919-4e26-8fcc-29b306f8f981</reportoriginalobjectid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerbireport>

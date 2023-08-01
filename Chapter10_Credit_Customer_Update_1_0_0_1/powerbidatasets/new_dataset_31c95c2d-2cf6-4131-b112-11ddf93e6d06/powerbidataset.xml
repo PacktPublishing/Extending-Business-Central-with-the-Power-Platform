@@ -1,0 +1,10 @@
+<powerbidataset uniquename="new_dataset_31c95c2d-2cf6-4131-b112-11ddf93e6d06">
+  <datasetobjectid>5600f2eb-0eb9-48fd-aeb1-a61e1e4ee07e</datasetobjectid>
+  <datasetoriginalobjectid>b5e745a0-04d0-4b7f-b530-5bdd35bc4a21</datasetoriginalobjectid>
+  <dataverseconnectionupdateenabled>0</dataverseconnectionupdateenabled>
+  <iscustomizable>1</iscustomizable>
+  <name>Customer Credit Review</name>
+  <package mimetype="application/zip">package.pbipkg</package>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerbidataset>
